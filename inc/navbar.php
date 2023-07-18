@@ -36,7 +36,7 @@
                         <i class="fas fa-user-tie"></i> <?php echo $_SESSION['logou']; ?> </a>
                     <div class="dropdown-menu text-center dropdown-menu-right">
                         <a class="dropdown-item" href="#"><img src="img/user.png" alt="60" height="60"/></a>                        
-                        <a class="dropdown-item" href="#">${user}</a>
+                        <a class="dropdown-item" href="#"><?php echo$_SESSION['user'] ;?></a>
                         <a class="dropdown-item" href="#" data-toggle="modal" data-target="#myModal"><?php echo$_SESSION['email'] ;?></a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="Controlador?accion=MisCompras">Mis Compras</a>
