@@ -2,7 +2,7 @@
 include "./php/session.php"; 
 
 if (!isset($_SESSION['logou']) && !isset($_SESSION['email'])) {
-  echo "I'm here";
+  
   $_SESSION['logou'] = "Iniciar Sesion";
   $_SESSION['email'] = "Iniciar Sesion";
   $_SESSION['user'] = "";

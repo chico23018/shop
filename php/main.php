@@ -2,7 +2,7 @@
 	
 	# Conexion a la base de datos #
 	function conexion(){
-		$pdo = new PDO('mysql:host=localhost;dbname=compras', 'root', '1234');
+		$pdo = new PDO('mysql:host=localhost;dbname=compra', 'root', '1234');
 		return $pdo;
 	}
 
