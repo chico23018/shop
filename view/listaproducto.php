@@ -23,7 +23,7 @@
                         </div>
                         <div class="card-body text-center d-flex">
                             <label><i class="fas fa-dollar-sign">'.$rows['Precio'].'</i></label>
-                            <img src="${p.getImagen()}" width="200" height="170">
+                            <img src="'.$rows['Foto'].'" width="200" height="170">
                         </div>
                         <div class="card-footer">
                             <div class="col-sm-12">
