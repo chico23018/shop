@@ -6,6 +6,7 @@ if (!isset($_SESSION['logou']) && !isset($_SESSION['email'])) {
   $_SESSION['logou'] = "Iniciar Sesion";
   $_SESSION['email'] = "Iniciar Sesion";
   $_SESSION['user'] = "";
+  $_SESSION['cont'] = "0";
 }?>
 <!DOCTYPE html>
 <html>
@@ -14,7 +15,7 @@ if (!isset($_SESSION['logou']) && !isset($_SESSION['email'])) {
 <body>
   <?php 
   require_once "./inc/navbar.php";
-  require_once "./view/listaproducto.php";
+  require_once "./view/lista.php";
   ?>
   <?php require_once "./inc/iniciarsession.php"; ?>
   <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
