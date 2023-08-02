@@ -7,22 +7,22 @@
     <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
             <li class="nav-item active">
-                <a class="nav-link" href="Controlador?accion=Nuevo"><i class="fas fa-home"></i> Home<span
+                <a class="nav-link" href="index.php"><i class="fas fa-home"></i> Home<span
                         class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="Controlador?accion=NuevoProducto"><i class="fas fa-plus-circle"></i>
-                    Productos</a>
+                <a class="nav-link" href="index.php?vista=newProduct"><i class="fas fa-plus-circle"></i>
+                    Produtti</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="Controlador?accion=carrito"><i class="fas fa-cart-plus">(<label
                             style="color: darkorange">
                             <?php echo $_SESSION['cont']; ?>
-                        </label>)</i> Carrito</a>
+                        </label>)</i> Carrello</a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="Controlador?accion=Acerca_de">Acerca de</a>
+                <a class="nav-link" href="Controlador?accion=Acerca_de">About</a>
             </li>
         </ul>
 
@@ -30,7 +30,7 @@
             <!--<form class="form-inline my-2 my-lg-0">-->
             <input style="width:400px" class="form-control mr-sm-2" id="txtBuscar">
             <button class="btn btn-outline-info my-2 my-sm-0" id="btnBuscar"><i class="fas fa-search"></i>
-                Buscar</button>
+                Cerca</button>
             </form>
         </ul>
 
@@ -50,9 +50,9 @@
                     <?php echo $_SESSION['email']; ?>
                 </a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="Controlador?accion=MisCompras">Mis Compras</a>
+                <a class="dropdown-item" href="Controlador?accion=MisCompras">mi acquisti</a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="Controlador?accion=Salir"> <i class="fas fa-arrow-right"> Salir</i></a>
+                <a class="dropdown-item" href="Controlador?accion=Salir"> <i class="fas fa-arrow-right"> Esci</i></a>
             </div>
         </ul>
 

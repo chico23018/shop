@@ -1,6 +1,6 @@
 <div class="container is-fluid mb-6">
-    <h1 class="title">Usuarios</h1>
-    <h2 class="subtitle">Lista de usuarios</h2>
+    <h1 class="title">Home</h1>
+    <h2 class="subtitle">List the product</h2>
 </div>
 
 <div class="container pb-6 pt-6">  
@@ -23,7 +23,7 @@
 
         $pagina=limpiar_cadena($pagina);
         $url="index.php?vista=user_list&page=";
-        $registros=3;
+        $registros=6;
         $busqueda="";
 
         # Paginador usuario #
