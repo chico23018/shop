@@ -39,9 +39,13 @@
                                 </div>
                                 <!-- Registrarse -->
                                 <div class="tab-pane fade" id="pills-registrar" role="tabpanel">
-                                    <form action="Controlador">                               
+                                    
+                               
+                                    
+                                    
+                                    <form action="./php/registro_usuario.php" method="post">                               
                                         <div class="form-group">
-                                            <label>Nombres</label>
+                                            <label >Nombres</label>
                                             <input type="text" name="txtnom" class="form-control" placeholder="Nombre y Apellido">
                                         </div>
                                         <div class="form-group">
@@ -60,8 +64,8 @@
                                             <label>Password</label>
                                             <input type="password" name="txtpass" class="form-control" placeholder="Password">
                                         </div>                                  
-                                        <button type="submit" name="accion" value="Registrar" class="btn btn-outline-danger btn-block">Crear Cuenta</button>
-                                    </form>
+                                        <button type="submit"   name="accion" value="Registrar" class="btn btn-outline-danger btn-block" >Crear Cuenta</button>
+                                    </form>                                                                                  
                                 </div>                          
                             </div> 
                         </div>
