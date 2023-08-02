@@ -45,16 +45,16 @@
                                     
                                     <form action="./php/registro_usuario.php" method="post">                               
                                         <div class="form-group">
-                                            <label >Nombres</label>
-                                            <input type="text" name="txtnom" class="form-control" placeholder="Nombre y Apellido">
+                                            <label >Nome</label>
+                                            <input type="text" name="txtnom" class="form-control" placeholder="Nome e Cognome">
                                         </div>
                                         <div class="form-group">
-                                            <label>NIT</label>
-                                            <input type="text" maxlength="8" name="txtdni" class="form-control" placeholder="01245678">
+                                            <label>Codice Fiscale</label>
+                                            <input type="text" maxlength="8" name="txtdni" class="form-control" placeholder="Codice Fiscale">
                                         </div>
                                         <div class="form-group">
-                                            <label>Direccion</label>
-                                            <input type="text" name="txtdire" class="form-control" placeholder="Direccion">
+                                            <label>Direzione</label>
+                                            <input type="text" name="txtdire" class="form-control" placeholder="Direzione">
                                         </div>
                                         <div class="form-group">
                                             <label>Email address</label>
