@@ -1,7 +1,6 @@
+<div class="container mt-4">
+            <div class="row">
 <?php
-
-
-
 $inicio = ($pagina > 0) ? (($pagina * $registros) - $registros) : 0;
 $tabla = "";
 
@@ -98,3 +97,5 @@ if ($total >= 1 && $pagina <= $Npaginas) {
 }
 
 ?>
+</div>
+        </div>

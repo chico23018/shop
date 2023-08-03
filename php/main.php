@@ -12,8 +12,10 @@ function conexion()
 function verificar_datos($filtro, $cadena)
 {
 	if (preg_match("/^" . $filtro . "$/", $cadena)) {
+		
 		return false;
 	} else {
+		
 		return true;
 	}
 }
@@ -110,7 +112,7 @@ function paginador_tablas($pagina, $Npaginas, $url, $botones)
 	if ($pagina == $Npaginas) {
 		$tabla .= '</ul>';
 	} else {
-		$tabla .= '<li class="page-item"><a class="page-link" href="' . $url . $Npaginas . '">' . $Npaginas . '</a></li>
+		$tabla .= '<li class="page-item"><a class="page-link" href="' . $url . $Npaginas . '">°°°°' . $Npaginas . '</a></li>
 				  <li class="page-item"><a class="page-link" href="' . $url . ($pagina + 1) . '">Siguiente</a></li>
 			</ul>
 			';

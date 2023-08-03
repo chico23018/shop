@@ -50,7 +50,7 @@
                                         </div>
                                         <div class="form-group">
                                             <label>Codice Fiscale</label>
-                                            <input type="text" maxlength="8" name="txtdni" class="form-control" placeholder="Codice Fiscale">
+                                            <input type="text" maxlength="50" name="txtdni" class="form-control" placeholder="Codice Fiscale">
                                         </div>
                                         <div class="form-group">
                                             <label>Direzione</label>

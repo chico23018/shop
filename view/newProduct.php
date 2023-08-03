@@ -10,20 +10,20 @@
                         <div class="card-body">
                             <form action="./php/new_product.php" method="POST" class="FormularioAjax" autocomplete="off"enctype="multipart/form-data">
                                 <div class="form-group">
-                                    <label>Nome:</label>
-                                    <input type="text" name="txtNombre" class="form-control">
+                                    <label>Nome:*</label>
+                                    <input type="text" name="txtNombre" class="form-control" required>
                                 </div>                     
                                 <div class="form-group">
-                                    <label>Descrizione</label>
-                                    <textarea name="txtDescripcion" class="form-control"></textarea>
+                                    <label>Descrizione:*</label>
+                                    <textarea name="txtDescripcion" class="form-control"></textarea required>
                                 </div>
                                 <div class="form-group">
-                                    <label>Prezzo</label>
-                                    <input type="text" name="txtPrecio" class="form-control">
+                                    <label>Prezzo*</label>
+                                    <input type="text" name="txtPrecio" class="form-control" pattern="[0-9.,]{1,70}" placeholder="0123456" required>
                                 </div>
                                 <div class="form-group">
-                                    <label>Stock</label>
-                                    <input type="text" name="txtStock" class="form-control">
+                                    <label>Stock*</label>
+                                    <input type="text" name="txtStock" class="form-control" pattern="[0-9]{1,70}" placeholder="0123456" required>
                                 </div>
                                 <div class="form-group">                            
                                     <input type="file" name="producto_foto" placeholder="sad">
@@ -69,16 +69,3 @@
                 </div>
             </div>
         </div>
-     <?php   echo "
- <script>
- function enviarFormulario() {
-     // Aquí puedes agregar cualquier validación que desees antes de enviar el formulario
- 
-     // Si todo está bien, se envía el formulario y después se recarga la página
-     return true;
- }
- 
- function recargarPagina() {
-     location.reload();
- }
- </script>";?>

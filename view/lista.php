@@ -22,7 +22,7 @@
         }
 
         $pagina=limpiar_cadena($pagina);
-        $url="index.php?vista=user_list&page=";
+        $url="index.php?vista=lista&page=";
         $registros=6;
         $busqueda="";
 

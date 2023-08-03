@@ -1,13 +1,48 @@
 <?php
-include "../php/session.php"; 
+require_once  "../php/session.php"; 
 require_once "../php/main.php";
 $nombre=limpiar_cadena($_POST['txtNombre']);
+$stock=limpiar_cadena($_POST['txtStock']);
+$descrizione=limpiar_cadena($_POST['txtDescripcion']);
+$precio=limpiar_cadena($_POST['txtPrecio']);
+
+ if(verificar_datos("[0-9- ]{1,70}",$stock)){
+    echo '
+    <div class="alert alert-info" role="alert" style="text-align:center">
+            <strong>¡Si è verificato un errore imprevisto!</strong><br>
+            Il Stock non corrisponde con il formato richiesto
+        </div>
+    ';
+   
+    exit();
+}
+if(verificar_datos("[0-9.,]{1,70}",$precio)){
+    echo '
+    <div class="alert alert-info" role="alert" style="text-align:center">
+            <strong>¡Si è verificato un errore imprevisto!</strong><br>
+            Il Prezzo non corrisponde con il formato richiesto
+        </div>
+    ';
+    exit();
+}
+
+if($nombre==""||$stock==""||$precio==""||$descrizione==""){
+    echo '
+    <div class="alert alert-info" role="alert" style="text-align:center">
+            <strong>¡Si è verificato un errore imprevisto!</strong><br>
+                    Devi compilare tutti i campi
+        </div>
+    ';
+    exit();
+}
+
+
 if(!$_SESSION['logou'] =="Iniciar Sesion"){
 
-    echo "I'm here";
+   
     echo '<div class="alert alert-info" role="alert" style="text-align:center">
-    <strong>¡Producto Salvat!</strong><br>
-        Nuevo Producto aggiunto
+    <strong>¡Produtto!</strong><br>
+        Nuevo Produtto aggiunto
     </div>';
       /* Directorios de imagenes */
   $img_dir='../img/producto/';
@@ -20,9 +55,9 @@ if(!$_SESSION['logou'] =="Iniciar Sesion"){
       if(!file_exists($img_dir)){
           if(!mkdir($img_dir,0777)){
               echo '
-                  <div class="notification is-danger is-light">
-                      <strong>¡Ocurrio un error inesperado!</strong><br>
-                      Error al crear el directorio de imagenes
+              <div class="alert alert-info" role="alert" style="text-align:center">
+                      <strong>¡Si è verificato un errore imprevisto!</strong><br>
+                      Error al creare dir
                   </div>
               ';
               exit();
@@ -32,9 +67,9 @@ if(!$_SESSION['logou'] =="Iniciar Sesion"){
       /* Comprobando formato de las imagenes */
       if(mime_content_type($_FILES['producto_foto']['tmp_name'])!="image/jpeg" && mime_content_type($_FILES['producto_foto']['tmp_name'])!="image/png"){
           echo '
-              <div class="notification is-danger is-light">
-                  <strong>¡Ocurrio un error inesperado!</strong><br>
-                  La imagen que ha seleccionado es de un formato que no está permitido
+          <div class="alert alert-info" role="alert" style="text-align:center">
+                  <strong>¡Si è verificato un errore imprevisto!</strong><br>
+                  L imagen che hai selezionato ha un formato non autorizato
               </div>
           ';
           exit();
@@ -75,7 +110,7 @@ if(!$_SESSION['logou'] =="Iniciar Sesion"){
       /* Moviendo imagen al directorio */
       if(!move_uploaded_file($_FILES['producto_foto']['tmp_name'], $img_dir.$foto)){
           echo '
-              <div class="notification is-danger is-light">
+          <div class="alert alert-info" role="alert" style="text-align:center">
                   <strong>¡Ocurrio un error inesperado!</strong><br>
                   No podemos subir la imagen al sistema en este momento, por favor intente nuevamente
               </div>
@@ -87,9 +122,47 @@ if(!$_SESSION['logou'] =="Iniciar Sesion"){
       $foto="";
   }
 
+/*== Guardando datos ==*/
+    $guardar_producto=conexion();
+    $guardar_producto=$guardar_producto->prepare("INSERT INTO producto(Nombres,Foto,Descripcion,Precio,Stock,idCliente) VALUES(:nombre,:foto,:descripcion,:precio,:stock,:idcliente)");
+
+    $marcadores=[
+        ":nombre"=>$nombre,
+        ":foto"=>$img_dir.$foto,
+        ":descripcion"=>$descrizione,
+        ":precio"=>$precio,
+        ":stock"=>$stock,
+        ":idcliente"=>$_SESSION['id']
+    ];
+
+    $guardar_producto->execute($marcadores);
+
+    if($guardar_producto->rowCount()==1){
+        echo '
+            <div class="notification is-info is-light">
+                <strong>¡PRODUCTO REGISTRADO!</strong><br>
+                El producto se registro con exito
+            </div>
+        ';
+    }else{
+
+    	if(is_file($img_dir.$foto)){
+			chmod($img_dir.$foto, 0777);
+			unlink($img_dir.$foto);
+        }
+
+        echo '
+            <div class="notification is-danger is-light">
+                <strong>¡Ocurrio un error inesperado!</strong><br>
+                No se pudo registrar el producto, por favor intente nuevamente
+            </div>
+        ';
+    }
+    $guardar_producto=null;
 
 }else{
-    echo '<div class="alert alert-info" role="alert" style="text-align:center">
+    echo '
+    <div class="alert alert-info" role="alert" style="text-align:center">
     <strong>¡Non puoi effettuare questa azione!</strong><br>
         Prima devi iniziare sessione
     </div>';

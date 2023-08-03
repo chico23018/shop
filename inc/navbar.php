@@ -52,7 +52,7 @@
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="Controlador?accion=MisCompras">mi acquisti</a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="Controlador?accion=Salir"> <i class="fas fa-arrow-right"> Esci</i></a>
+                <a class="dropdown-item" href="index.php?vista=logout"> <i class="fas fa-arrow-right"> Esci</i></a>
             </div>
         </ul>
 
