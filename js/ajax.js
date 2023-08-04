@@ -4,7 +4,7 @@ function enviar_formulario_ajax(e){
     e.preventDefault();
 
     
-    let enviar=confirm("Quieres enviar el formulario");
+    let enviar=confirm("Vuoi mandare questo formulario");
 
     if(enviar==true){
 
@@ -30,8 +30,12 @@ function enviar_formulario_ajax(e){
          let contenedor=document.querySelectorAll(".form-rest");
            contenedor.innerHTML = respuesta;
           
-            // Limpiar los campos del formulario después de mostrar la respuesta del servidor
-            this.reset();
+           // Limpiar los campos del formulario después de mostrar la respuesta del servidor
+           this.reset();
+                
+           // Borra manualmente el contenido de los campos del formulario
+           let campos = this.querySelectorAll("input, textarea");
+           campos.forEach(campo => campo.value = "");
                 
             });
         

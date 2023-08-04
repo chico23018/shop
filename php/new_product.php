@@ -1,6 +1,6 @@
 <?php
-require_once  "../php/session.php"; 
-require_once "../php/main.php";
+require_once  "./php/session.php"; 
+require_once "./php/main.php";
 $nombre=limpiar_cadena($_POST['txtNombre']);
 $stock=limpiar_cadena($_POST['txtStock']);
 $descrizione=limpiar_cadena($_POST['txtDescripcion']);
