@@ -8,7 +8,7 @@
                             <h3>Aggiungi Produtto</h3>
                         </div>                
                         <div class="card-body">
-                            <form action="../php/new_product.php" method="POST" class="FormularioAjax" autocomplete="off" enctype="multipart/form-data">
+                            <form action="./php/new_product.php" method="POST" class="FormularioAjax" autocomplete="off" enctype="multipart/form-data">
                                 <div class="form-group">
                                     <label>Nome:*</label>
                                     <input type="text" name="txtNombre" class="form-control" required>

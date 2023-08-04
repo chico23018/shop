@@ -28,14 +28,11 @@ function enviar_formulario_ajax(e){
         .then(respuesta => respuesta.text())
         .then(respuesta =>{ 
          let contenedor=document.querySelectorAll(".form-rest");
+         let chico=document.querySelectorAll(".form-rest");
            contenedor.innerHTML = respuesta;
-          console.log (respuesta);
-           // Limpiar los campos del formulario después de mostrar la respuesta del servidor
-           this.reset();
-                
-           // Borra manualmente el contenido de los campos del formulario
-           let campos = this.querySelectorAll("input, textarea");
-           campos.forEach(campo => campo.value = "");
+           chico.innerHTML = respuesta;
+           console.log (respuesta);
+           
                 
             });
         
