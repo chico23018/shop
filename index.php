@@ -28,6 +28,7 @@ if (
   }else if ( is_file("./php/" . $_GET['vista'] . ".php") && $_GET['vista'] != "lista"
   && $_GET['vista'] != "404"){
     include "./php/" . $_GET['vista'] . ".php";
+    include "./inc/script.php";
   }else {
     if ($_GET['vista'] == "lista") {
       include "./inc/navbar.php";

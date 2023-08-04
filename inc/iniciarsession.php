@@ -25,7 +25,7 @@
                             <div class="tab-content" id="pills-tabContent">
                                 <!-- Iniciar Session -->
                                 <div class="tab-pane fade show active" id="pills-iniciar" role="tabpanel">
-                                    <form action="Controlador">
+                                    <form action="./php/login.php" method="post">
                                         <div class="form-group">
                                             <label>Email address</label>
                                             <input type="email" name="txtemail" class="form-control" placeholder="email@example.com">

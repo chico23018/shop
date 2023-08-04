@@ -23,7 +23,7 @@ function enviar_formulario_ajax(e){
             cache: 'no-cache',
             body: data
         };
-        
+
         fetch(action,config)
         .then(respuesta => respuesta.text())
         .then(respuesta =>{ 
@@ -34,15 +34,14 @@ function enviar_formulario_ajax(e){
             this.reset();
                 
             // Borra manualmente el contenido de los campos del formulario
-          
-            
+            let campos = this.querySelectorAll("input, textarea");
+            campos.forEach(campo => campo.value = "");
             });
         
+      
     }
    
 }
-let campos = this.querySelectorAll("input,");
-campos.forEach(campo => campo.value = "");
 
 formularios_ajax.forEach(formularios => {
     formularios.addEventListener("submit",enviar_formulario_ajax);

@@ -28,5 +28,6 @@
 
         # Paginador usuario #
         require_once "./php/listaproducto.php";
+        
     ?>
 </div>

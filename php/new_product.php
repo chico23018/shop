@@ -37,7 +37,7 @@ if($nombre==""||$stock==""||$precio==""||$descrizione==""){
 }
 
 
-if(!$_SESSION['logou'] =="Iniciar Sesion"){
+if($_SESSION['logou'] !="Iniciar Sesion"){
 
    
     echo '<div class="alert alert-info" role="alert" style="text-align:center">
@@ -124,15 +124,15 @@ if(!$_SESSION['logou'] =="Iniciar Sesion"){
 
 /*== Guardando datos ==*/
     $guardar_producto=conexion();
-    $guardar_producto=$guardar_producto->prepare("INSERT INTO producto(Nombres,Foto,Descripcion,Precio,Stock,idCliente) VALUES(:nombre,:foto,:descripcion,:precio,:stock,:idcliente)");
+    $guardar_producto=$guardar_producto->prepare("INSERT INTO producto(Nombres,Foto,Descripcion,Precio,Stock,codice_fiscale) VALUES(:nombre,:foto,:descripcion,:precio,:stock,:codice_fiscale)");
 
     $marcadores=[
         ":nombre"=>$nombre,
-        ":foto"=>$img_dir.$foto,
+        ":foto"=>"./img/producto/".$foto,
         ":descripcion"=>$descrizione,
         ":precio"=>$precio,
         ":stock"=>$stock,
-        ":idcliente"=>$_SESSION['id']
+        ":codice_fiscale"=>$_SESSION['codice_fiscale']
     ];
 
     $guardar_producto->execute($marcadores);

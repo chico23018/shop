@@ -29,7 +29,7 @@
                                     <input type="file" name="producto_foto" placeholder="sad">
                                 </div>
                                 <div class="form-group">
-                                <input type="submit" class="btn btn-danger" name="accion" value="Guardar">
+                                <button type="submit" class="btn btn-danger" name="accion" value="GuardarProducto">Guardar</button>
                                 </div>
                             </form>
                         </div>               
@@ -69,3 +69,4 @@
                 </div>
             </div>
         </div>
+    

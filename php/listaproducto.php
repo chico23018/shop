@@ -53,7 +53,7 @@ if ($total >= 1 && $pagina <= $Npaginas) {
                                 <label>' . $rows['Descripcion'] . '</label>                                   
                             </div>
                             <div class=" col-sm-12 text-center">                                
-                                <a href="Controlador?accion=AgregarCarrito&id=' . $rows['idProducto'] . '" class="btn btn2 btn-outline-primary">Agregar a Carrito<i class="fas fa-cart-plus"></i></a>
+                                <a href="' . $url . $pagina. '&id=' . $rows['idProducto'] . '" class="btn btn2 btn-outline-primary">Agregar a Carrito<i class="fas fa-cart-plus"></i></a>
                                 <a href="Controlador?accion=Comprar&id=' . $rows['idProducto'] . '" class="btn btn-danger">Comprar</a>
                             </div>                         
                         </div>
