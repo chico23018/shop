@@ -32,7 +32,12 @@ function enviar_formulario_ajax(e){
            contenedor.innerHTML = respuesta;
            chico.innerHTML = respuesta;
            console.log (respuesta);
-           
+           // Limpiar los campos del formulario después de mostrar la respuesta del servidor
+           this.reset();
+                
+           // Borra manualmente el contenido de los campos del formulario
+           let campos = this.querySelectorAll("input, textarea");
+           campos.forEach(campo => campo.value = "");
                 
             });
         
