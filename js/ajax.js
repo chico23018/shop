@@ -29,7 +29,7 @@ function enviar_formulario_ajax(e){
         .then(respuesta =>{ 
          let contenedor=document.querySelectorAll(".form-rest");
            contenedor.innerHTML = respuesta;
-          
+          console.log (respuesta);
            // Limpiar los campos del formulario después de mostrar la respuesta del servidor
            this.reset();
                 
