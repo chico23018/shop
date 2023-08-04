@@ -27,11 +27,8 @@ function enviar_formulario_ajax(e){
         fetch(action,config)
         .then(respuesta => respuesta.text())
         .then(respuesta =>{ 
-         let contenedor=document.querySelectorAll(".form-rest");
-         let chico=document.querySelectorAll(".form-rest");
-           contenedor.innerHTML = respuesta;
-           chico.innerHTML = respuesta;
-           console.log (respuesta);
+         let contenedor=document.querySelector(".form-rest");
+            contenedor.innerHTML = respuesta;
            // Limpiar los campos del formulario después de mostrar la respuesta del servidor
            this.reset();
                 
