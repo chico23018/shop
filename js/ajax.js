@@ -28,9 +28,14 @@ function enviar_formulario_ajax(e){
         .then(respuesta => respuesta.text())
         .then(respuesta =>{ 
          let contenedor=document.querySelector(".form-rest");
-            contenedor.innerHTML = respuesta;
-            location.reload();
-            window.location.href='./index.php'; 
+            console.log(respuesta.length);
+            if(respuesta.length>200){
+              contenedor.innerHTML = respuesta;
+            }else {
+              window.location.href=respuesta;
+            }
+            
+            
            // Limpiar los campos del formulario después de mostrar la respuesta del servidor
            this.reset();
                 

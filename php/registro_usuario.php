@@ -28,7 +28,7 @@ include_once "../php/session.php";
       $check_usuario=$check_usuario->query("SELECT * FROM cliente WHERE codice_fiscale='$codice_fiscale'or Email ='$email'");
       if($check_usuario->rowCount()>0){
           echo  '
-              <<div class="alert alert-info" role="alert" style="text-align:center">
+              <div class="alert alert-info" role="alert" style="text-align:center">
                   <strong>¡Si è verificato un errore!</strong><br>
                   il codice fiscale e email sono già resitrati
               </div>
@@ -52,7 +52,7 @@ include_once "../php/session.php";
             $_SESSION['email'] = $email;
             $_SESSION['codice_fiscale'] = $codice_fiscale;
            
-                header("Location:../index.php");
+            echo " ./index.php";
         } else {
             echo "Error al insertar el registro: " .mysqli_query($conexion);
         } 

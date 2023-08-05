@@ -21,28 +21,28 @@ if (!isset($_SESSION['logou']) && !isset($_SESSION['email'])) {
 
 }
 
-
+require_once "./inc/navbar.php";
 echo '<div class="form-rest" id="liveAlertPlaceholder" ></div>';
 if (
   is_file("./view/" . $_GET['vista'] . ".php") && $_GET['vista'] != "lista"
   && $_GET['vista'] != "404" ) {
-    require_once "./inc/navbar.php";
+    
     include "./view/" . $_GET['vista'] . ".php";
     include "./inc/script.php";
    
   }else if ( is_file("./php/" . $_GET['vista'] . ".php") && $_GET['vista'] != "lista"
   && $_GET['vista'] != "404"){
-    require_once "./inc/navbar.php";
+    
     include "./php/" . $_GET['vista'] . ".php";
     include "./inc/script.php";
   }else if ( is_file("./inc/" . $_GET['vista'] . ".php") && $_GET['vista'] != "lista"
   && $_GET['vista'] != "404"){
-    require_once "./inc/navbar.php";
+    
     include "./inc/" . $_GET['vista'] . ".php";
     include "./inc/script.php";
   }else {
     if ($_GET['vista'] == "lista") {
-      require_once "./inc/navbar.php";
+      
       require_once "./view/lista.php";
       include "./inc/script.php";
     } else {

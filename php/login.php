@@ -54,14 +54,11 @@ if($check_user->rowCount()==1){
         $_SESSION['email'] = $check_user['Email'];
         $_SESSION['codice_fiscale'] =$check_user['codice_fiscale'];
 
-    
-	
-		header("Location: ../index.php");
-	
+        echo " ./index.php";
 
     }else{
         echo '
-            <div class="notification is-danger is-light">
+        <div class="alert alert-info" role="alert" style="text-align:center">
                 <strong>¡Ocurrio un error inesperado!</strong><br>
                 Usuario o clave incorrectos
             </div>
@@ -69,7 +66,7 @@ if($check_user->rowCount()==1){
     }
 }else{
     echo '
-        <div class="notification is-danger is-light">
+    <div class="alert alert-info" role="alert" style="text-align:center">
             <strong>¡Ocurrio un error inesperado!</strong><br>
             Usuario o clave incorrectos
         </div>
