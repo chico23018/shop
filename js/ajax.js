@@ -28,7 +28,6 @@ function enviar_formulario_ajax(e){
         .then(respuesta => respuesta.text())
         .then(respuesta =>{ 
          let contenedor=document.querySelector(".form-rest");
-            console.log(respuesta.length);
             if(respuesta.length>200){
               contenedor.innerHTML = respuesta;
             }else {

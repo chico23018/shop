@@ -6,6 +6,7 @@ $email=limpiar_cadena($_POST['txtemail']);
 $clave=limpiar_cadena($_POST['txtpass']);
 
 
+if($_SESSION['logou'] == "Iniciar Sesion"){
 /*== Verificando campos obligatorios ==*/
 if($email=="" || $clave==""){
     echo '
@@ -59,18 +60,29 @@ if($check_user->rowCount()==1){
     }else{
         echo '
         <div class="alert alert-info" role="alert" style="text-align:center">
-                <strong>¡Ocurrio un error inesperado!</strong><br>
-                Usuario o clave incorrectos
+        <strong>¡Si è verificato un errore imprevisto!</strong><br>
+                   password errata
             </div>
         ';
     }
 }else{
     echo '
     <div class="alert alert-info" role="alert" style="text-align:center">
-            <strong>¡Ocurrio un error inesperado!</strong><br>
-            Usuario o clave incorrectos
+    <strong>¡Si è verificato un errore imprevisto!</strong><br>
+                      non sei resgistrato
         </div>
     ';
 }
 $check_user=null;
+
+}else{
+
+    echo '
+    <div class="alert alert-info" role="alert" style="text-align:center">
+    <strong>¡Si è verificato un errore imprevisto!</strong><br>
+             hai gia iniziato session
+        </div>
+    ';
+}
+
 ?>
