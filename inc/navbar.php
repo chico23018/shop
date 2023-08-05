@@ -46,7 +46,7 @@
                 <a class="dropdown-item" href="#">
                     <?php echo $_SESSION['user']; ?>
                 </a>
-                <a class="dropdown-item" href="index.php?vista=iniciarsession" >
+                <a class="dropdown-item" href="index.php?vista=iniciarsession">
                     <?php echo $_SESSION['email']; ?>
                 </a>
                 <div class="dropdown-divider"></div>

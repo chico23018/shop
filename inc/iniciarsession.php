@@ -1,6 +1,6 @@
  <!-- Modal Iniciar Session o Registrarse -->
 
- <div class="" id="" tabindex="-1" role="dialog">
+ <div  tabindex="-1" role="dialog">
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="container col-lg-9">                   
                     <div class="modal-content">                   
@@ -26,7 +26,7 @@
                             <div class="tab-content" id="pills-tabContent">
                                 <!-- Iniciar Session -->
                                 <div class="tab-pane fade show active" id="pills-iniciar" role="tabpanel">
-                                    <form action="./php/login.php" method="post">
+                                    <form action="./php/login.php" method="post" class="FormularioAjax">
                                         <div class="form-group">
                                             <label>Email address</label>
                                             <input type="email" name="txtemail" class="form-control" placeholder="email@example.com">
@@ -40,11 +40,7 @@
                                 </div>
                                 <!-- Registrarse -->
                                 <div class="tab-pane fade" id="pills-registrar" role="tabpanel">
-                                    
-                               
-                                    
-                                    
-                                    <form action="./php/registro_usuario.php" method="post" class="FormularioAjax">                               
+                                     <form action="./php/registro_usuario.php" method="post" class="FormularioAjax">                               
                                         <div class="form-group">
                                             <label >Nome</label>
                                             <input type="text" name="txtnom" class="form-control" placeholder="Nome e Cognome">
@@ -76,4 +72,4 @@
             </div>
             
         </div>
-         <?php include "script.php";?>
+         

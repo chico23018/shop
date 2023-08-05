@@ -15,7 +15,7 @@ include_once "../php/session.php";
             /*== Verificando campos obligatorios ==*/
     if($nombre=="" || $codice_fiscale=="" || $direccion=="" || $email=="" || $password==""){
         echo'
-            <div class="notification is-danger is-light">
+            <<div class="alert alert-info" role="alert" style="text-align:center">
                 <strong>¡Sei RESTRITATO!</strong><br>
                   Sei stato restritato con successo  
             </div>
@@ -28,7 +28,7 @@ include_once "../php/session.php";
       $check_usuario=$check_usuario->query("SELECT * FROM cliente WHERE codice_fiscale='$codice_fiscale'or Email ='$email'");
       if($check_usuario->rowCount()>0){
           echo  '
-              <div class="notification is-danger is-light">
+              <<div class="alert alert-info" role="alert" style="text-align:center">
                   <strong>¡Si è verificato un errore!</strong><br>
                   il codice fiscale e email sono già resitrati
               </div>

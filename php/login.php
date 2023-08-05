@@ -54,11 +54,10 @@ if($check_user->rowCount()==1){
         $_SESSION['email'] = $check_user['Email'];
         $_SESSION['codice_fiscale'] =$check_user['codice_fiscale'];
 
-        if(headers_sent()){
-            echo "<script> window.location.href='../index.php'; </script>";
-        }else{
-            header("Location: ../index.php");
-        }
+    
+	
+		header("Location: ../index.php");
+	
 
     }else{
         echo '
