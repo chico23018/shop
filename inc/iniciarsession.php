@@ -1,5 +1,6 @@
  <!-- Modal Iniciar Session o Registrarse -->
- <div class="modal fade" id="myModal" tabindex="-1" role="dialog">
+
+ <div class="" id="" tabindex="-1" role="dialog">
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="container col-lg-9">                   
                     <div class="modal-content">                   
@@ -75,4 +76,4 @@
             </div>
             
         </div>
-         
+         <?php include "script.php";?>

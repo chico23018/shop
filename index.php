@@ -20,7 +20,9 @@ if (!isset($_SESSION['logou']) && !isset($_SESSION['email'])) {
     $_GET['vista'] = "lista";
 
 }
+
 include "./inc/navbar.php";
+echo '<div class="form-rest" id="liveAlertPlaceholder" ></div>';
 if (
   is_file("./view/" . $_GET['vista'] . ".php") && $_GET['vista'] != "lista"
   && $_GET['vista'] != "404" ) {

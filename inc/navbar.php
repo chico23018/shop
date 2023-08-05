@@ -42,11 +42,11 @@
                 <?php echo $_SESSION['logou']; ?>
             </a>
             <div class="dropdown-menu text-center dropdown-menu-right">
-                <a class="dropdown-item" href="#"><img src="img/user.png" alt="60" height="60" /></a>
+                <a class="dropdown-item" href="#"><img src="" alt="60" height="60" /></a>
                 <a class="dropdown-item" href="#">
                     <?php echo $_SESSION['user']; ?>
                 </a>
-                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#myModal">
+                <a class="dropdown-item" href="index.php?vista=iniciarsession" >
                     <?php echo $_SESSION['email']; ?>
                 </a>
                 <div class="dropdown-divider"></div>
