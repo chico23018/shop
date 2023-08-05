@@ -13,6 +13,8 @@ if (!isset($_SESSION['logou']) && !isset($_SESSION['email'])) {
 <?php require_once "./inc/head.php" ?>
 
 <body>
+
+
   <?php 
    if (!isset($_GET['vista']) || $_GET['vista'] == "") {
     $_GET['vista'] = "lista";
@@ -22,6 +24,13 @@ if (
   is_file("./view/" . $_GET['vista'] . ".php") && $_GET['vista'] != "lista"
   && $_GET['vista'] != "404" ) {
     include "./inc/navbar.php";
+   
+   
+    if($_SESSION['msj']!=null){
+      echo ' <div class="form-rest" id="liveAlertPlaceholder" > '.$_SESSION['msj'].'  </div>';
+    }
+
+   
     include "./view/" . $_GET['vista'] . ".php";
     include "./inc/script.php";
    

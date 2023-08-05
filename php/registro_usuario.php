@@ -14,14 +14,29 @@ include_once "../php/session.php";
         
             /*== Verificando campos obligatorios ==*/
     if($nombre=="" || $codice_fiscale=="" || $direccion=="" || $email=="" || $password==""){
-        echo '
+        echo'
             <div class="notification is-danger is-light">
                 <strong>¡Sei RESTRITATO!</strong><br>
                   Sei stato restritato con successo  
             </div>
         ';
+        header("Location:../index.php");
         exit();
     }
+      /*== Verificando usuario ==*/
+      $check_usuario=conexion();
+      $check_usuario=$check_usuario->query("SELECT * FROM cliente WHERE codice_fiscale='$codice_fiscale'or Email ='$email'");
+      if($check_usuario->rowCount()>0){
+          echo  '
+              <div class="notification is-danger is-light">
+                  <strong>¡Si è verificato un errore!</strong><br>
+                  il codice fiscale e email sono già resitrati
+              </div>
+          ';
+         
+          exit();
+      }
+      $check_usuario=null;
                               
       
 

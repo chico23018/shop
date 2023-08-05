@@ -43,7 +43,7 @@
                                
                                     
                                     
-                                    <form action="./php/registro_usuario.php" method="post">                               
+                                    <form action="./php/registro_usuario.php" method="post" class="FormularioAjax">                               
                                         <div class="form-group">
                                             <label >Nome</label>
                                             <input type="text" name="txtnom" class="form-control" placeholder="Nome e Cognome">
@@ -72,4 +72,5 @@
                     </div>
                 </div>
             </div>
+            <?php include "../inc/script.php"; ?>
         </div>
