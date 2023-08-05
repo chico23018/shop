@@ -65,12 +65,14 @@
                                             <input type="password" name="txtpass" class="form-control" placeholder="Password">
                                         </div>                                  
                                         <button type="submit"   name="accion" value="Registrar" class="btn btn-outline-danger btn-block" >Crear Cuenta</button>
-                                    </form>                                                                                  
+                                    </form>
+                                                                                                                  
                                 </div>                          
                             </div> 
                         </div>
                     </div>
                 </div>
             </div>
-            <?php include "../inc/script.php"; ?>
+            
         </div>
+         
