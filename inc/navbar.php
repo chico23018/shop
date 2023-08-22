@@ -15,7 +15,7 @@
                     Produtti</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="Controlador?accion=carrito"><i class="fas fa-cart-plus">(<label
+                <a class="nav-link" href="index.php?vista=carrello1"><i class="fas fa-cart-plus">(<label
                             style="color: darkorange">
                             <?php echo $_SESSION['cont']; ?>
                         </label>)</i> Carrello</a>

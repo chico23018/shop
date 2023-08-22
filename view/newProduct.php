@@ -38,7 +38,7 @@
                 <div class="col-sm-7">
                 <table class="table table-responsive">
 
-                  <?php include_once "listauser.php"?>
+                  <?php  require_once "listauser.php"?>
 
                     
                     </table>

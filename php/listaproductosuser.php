@@ -1,5 +1,5 @@
 <?php
-
+include "./inc/script.php";
 $inicio = ($pagina > 0) ? (($pagina * $registros) - $registros) : 0;
 $tabla = "";
 

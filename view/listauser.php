@@ -1,5 +1,5 @@
 <?php
-        require_once "./php/main.php";
+         require_once "./php/main.php";
 
         # Eliminar usuario #
      /*   if(isset($_GET['user_id_del'])){

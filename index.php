@@ -22,6 +22,7 @@ if (!isset($_SESSION['logou']) && !isset($_SESSION['email'])) {
 }
 
 require_once "./inc/navbar.php";
+
 echo '<div class="form-rest" id="liveAlertPlaceholder" ></div>';
 if (
   is_file("./view/" . $_GET['vista'] . ".php") && $_GET['vista'] != "lista"
@@ -50,7 +51,9 @@ if (
     }
 
 }
- 
+
+
+        
   
   ?>
   

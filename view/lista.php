@@ -23,6 +23,7 @@
 
         # Paginador usuario #
         require_once "./php/listaproducto.php";
-        
+        require_once "./php/arraylistacompra.php";
+      
     ?>
 </div>
