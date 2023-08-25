@@ -21,6 +21,7 @@ $(document).ready(function () {
             }
         });
     });
+
     function eliminar(idp) {
         var url = "Controlador?accion=deleteProducto&id=" + idp;
         console.log("hol");
@@ -33,21 +34,22 @@ $(document).ready(function () {
         });
     }
 
-    $("tr #Cant").click(function (e) {
+ /* $("#Cant").click(function (e) {
         var idp = $(this).parent().find('#item1').val();
         var cantidad = $(this).parent().find('#Cant').val();
-        var url = "Controlador?accion=updateCantidad";
-        console.log(idp, cantidad);
+        var url = "index.php?quantita="+cantidad+"&id="+idp;;
+        console.log(idp, cantidad,url);
         $.ajax({
-            type: 'POST',
+            type: 'GET',
             url: url,
-            data: "id=" + idp + "&cantidad=" + cantidad,
+            data: "id=" + idp + "&quantita=" + cantidad,
             success: function (data, textStatus, jqXHR) {
-//                parent.location.href = "Controlador?accion=carrito";
+            
+           //  parent.location.href = "index.php?vista=updatequantita";
             }
         });
-    });    
-   
+    }); */  
+
 });
 
 

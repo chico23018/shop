@@ -10,12 +10,16 @@
                 echo $fechaFormateada; ?></p>                               
             </div>                    
             <div class="row">             
-                <div class="col-lg-9">                 
-                    <table class="table">
+                <div class="col-lg-9">  
+                          
+                      <table class="table">
                        
-                    <?php include "./php/listacompra.php"; ?>
+                          <?php 
+                         
+                             include "./php/listacompra.php"; ?>
                        
-                    </table>                    
+                        </table> 
+                                     
                 </div>
                 <div class="col-lg-3">                  
                     <div class="card">
@@ -24,13 +28,13 @@
                         </div>
                         <div class="card-body">
                             <label>Subtotal:</label>
-                            <a class="form-control text-center"><i class="fas fa-dollar-sign h5"> ${totalPagar}0</i></a>
+                            <a class="form-control text-center"><i class="fas fa-dollar-sign h5"> 0.00</i></a>
                             <label>Precio Envio:</label>
                             <a class="form-control text-center"><i class="fas fa-dollar-sign h5"> 0.00</i></a>
                             <label>Descuento:</label>
                             <a class="form-control text-center"><i class="fas fa-dollar-sign h5"> 0.00</i></a>
                             <label>Total a Pagar:</label>
-                            <a class="form-control text-center"><i class="fas fa-dollar-sign h4 primary"> ${totalPagar}0</i></a>
+                            <a class="form-control text-center"><i class="fas fa-dollar-sign h4 primary">0.00 </i></a>
                         </div>
                         <div class="card-footer">
                             <a href="Controlador?accion=GenerarCompra" class="btn btn-danger btn-block">Generar Compra</a>
@@ -79,3 +83,4 @@
         </div>
        
 
+        <?php include "./php/updatequantita.php";?>

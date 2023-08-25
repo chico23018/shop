@@ -29,23 +29,23 @@ if (
   && $_GET['vista'] != "404" ) {
     
     include "./view/" . $_GET['vista'] . ".php";
-    include "./inc/script.php";
+    require_once "./inc/script.php";
    
   }else if ( is_file("./php/" . $_GET['vista'] . ".php") && $_GET['vista'] != "lista"
   && $_GET['vista'] != "404"){
     
     include "./php/" . $_GET['vista'] . ".php";
-    include "./inc/script.php";
+    require_once "./inc/script.php";
   }else if ( is_file("./inc/" . $_GET['vista'] . ".php") && $_GET['vista'] != "lista"
   && $_GET['vista'] != "404"){
     
     include "./inc/" . $_GET['vista'] . ".php";
-    include "./inc/script.php";
+    require_once "./inc/script.php";
   }else {
     if ($_GET['vista'] == "lista") {
       
       require_once "./view/lista.php";
-      include "./inc/script.php";
+      require_once "./inc/script.php";
     } else {
      //   include "./vista/404.php";
     }
@@ -54,7 +54,7 @@ if (
 
 
         
-  
+
   ?>
   
 </body>

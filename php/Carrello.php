@@ -54,7 +54,7 @@ class Carrello
         $this->descrizione = $descrizione;
     }
     public function getPrezzocompra(){
-        return $this->idProduct;
+        return $this->prezzocompra;
     }
     public function setPrezzocompra( $prezzocompra){
         $this->prezzocompra = $prezzocompra;

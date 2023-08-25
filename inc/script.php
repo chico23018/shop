@@ -66,4 +66,53 @@ formularios_ajax.forEach(formularios => {
    
 });
 
+
+
+/*const elementoClic = document.querySelectorAll("#Can");
+
+function onClickHandler(e) {
+  e.preventDefault();
+  var idpElement = this.parentNode.querySelector("#item1");
+      var cantidad = this.value;
+      var idp = idpElement ? idpElement.value : null;
+      var url = "index.php?vista=updatequantita";
+
+      console.log(idp, cantidad);
+  let enviar = confirm("Vuoi mandare questo formulario");
+
+  if (enviar == true) {
+    // Realiza las acciones que deseas cuando se hace clic en el elemento
+    // Por ejemplo, puedes realizar una solicitud AJAX aquí.
+  }
+}
+elementoClic.forEach(Clic=>{
+  Clic.addEventListener("click", onClickHandler);
+});*/
+
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function submitForm() {
+  // Simula un clic en el botón de envío cuando se hace clic en el párrafo.
+  document.getElementById("submitButton").click();
+}
+</script>
+</head>
+<body>
+
+<!-- Agrega un botón de envío oculto -->
+<form action="tu_archivo_de_procesamiento.php" method="POST">
+  <!-- Coloca cualquier campo del formulario que necesites aquí -->
+
+  <!-- El botón de envío oculto -->
+  <input type="submit" id="submitButton" style="display: none;">
+</form>
+
+<!-- Párrafo que se comportará como el botón de envío -->
+<p id="demo" onclick="submitForm()">Haz clic para enviar el formulario.</p>
+
+</body>
+</html>
+
  </script>

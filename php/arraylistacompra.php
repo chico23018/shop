@@ -15,9 +15,9 @@ if($_SERVER["REQUEST_METHOD"] === "GET"){
 
 
 }
-if (isset($_SESSION["array"])) {
+if (isset($_SESSION['array'])) {
     if (class_exists('Carrello')) {
-        $carkkd=$_SESSION["array"];
+        $carkkd=$_SESSION['array'];
         $arrayProducto  = unserialize($carkkd); }
 
 }else{
@@ -71,8 +71,9 @@ if (isset($_SESSION["array"])) {
     }
        $_SESSION['cont']= count($arrayProducto);
      
-       $_SESSION["array"]= serialize($arrayProducto);
-  
+       $_SESSION['array']= serialize($arrayProducto);
+       $carrel=null;
+       $check_product=null;
 
        }
        else{
